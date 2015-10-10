@@ -1,13 +1,18 @@
 /* jshint node: true */
 'use strict';
-var SSHAdapter = require('./lib/ssh-adapter');
+var Indexdapter = require('./lib/index-adapter');
+var AssetsAdapter = require('./lib/assets-adapter');
 
 module.exports = {
-  name: 'ember-cli-deploy-ssh',
-  type: 'ember-deploy-addon',
-  adapters: {
-    index: {
-      'ssh': SSHAdapter
-    }
-  }
+	name: 'ember-cli-deploy-ssh',
+	type: 'ember-deploy-addon',
+	adapters: {
+		index: {
+			'ssh': Indexdapter
+		},
+
+		assets: {
+			'ssh': AssetsAdapter
+		}
+	}
 };
